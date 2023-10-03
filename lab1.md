@@ -28,8 +28,26 @@
 - using the `ls` command with a path to a directory will show all files and directories within the argument (which is also a directory). In this case, ls messages will show all the txt files that are in the messages folder.
 - Not an error!
 
-## Typing cd with a path to a _file_ 
+## Typing `ls` with a path to a _file_ 
 ![Image](ls_file.png)
 - working directory: user@sahara ~/lecture1
 - using the `ls` command with a path to a file will simply show the file itself. For example, when I used 'ls' with the argument as the file Hello.java, the output was Hello.java.
+- Not an error!
+
+## Typing `cat` with _no arguments_
+![Image](cat_noarg.png)
+- working directory: user@sahara ~/lecture1
+- using the `cat` command with not run anything... it continuously loads without getting an output. This is because `cat` reads data from the file and gives its content as output. In our case, there is no data to read from our directory because we are not in a file!
+- Error!
+
+## Typing `cat` with path to a _directory_
+![Image](cat_directory.png) 
+- working directory: user@sahara ~/lecture1
+- using the `cat` command with a path to a directory will give an error saying that our argument is not a file. This error occurs again because there is no data to read from our argument because it is not a file!
+- Error!
+
+## Typing `cat` with a path to a _file_ 
+![Image](cat_file.png)
+- working directory: user@sahara ~/lecture1
+- using the `cat` command with a path to a file will show the contents of the file. For example, when I used 'cat' with the argument as the file Hello.java, the output was the code within the Hello.java file. 
 - Not an error!
