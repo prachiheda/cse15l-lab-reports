@@ -1,25 +1,25 @@
 ## Typing `cd` with _no arguments_
-![Image](cd_nocommand.png)
-- working directory: user@sahara ~
-- using the `cd` command with no arguments returns the user to the home directory. In this case, we are already in the home directory so nothing happened.
+![Image](cd_noarg.png)
+- working directory: user@sahara ~/lecture1
+- using the `cd` command with no arguments returns the user to the home directory. In this case, we go back to the home directory after being in the lecture1 directory
 - Not an error!
 
 ## Typing `cd` with path to a _directory_
 ![Image](cd_directory.png)
 - working directory: user@sahara ~
-- using the `cd` command with a directory puts the user in the new directory as specified, which in this case is a folder I created called Name.
+- using the `cd` command with a directory puts the user in the new directory as specified, which in this case is a folder lecture1.
 - Not an error!
 
 ## Typing `cd` with a path to a _file_
 ![Image](cd_file.png)
-- working directory: user@sahara ~
-- using the `cd` command with a file does not work, as cd stands for "change directory." Even though I created a file named "Prachi" in my Name folder, I cannot access it using `cd`.
+- working directory: user@sahara ~/lecture1
+- using the `cd` command with a file does not work, as cd stands for "change directory." Even though there is a file named Hello.java in the lecture1 folder, I cannot access it using `cd`.
 - Error!
 
 ## Typing `ls` with _no arguments_
 ![Image](ls_noarg.png)
 - working directory: user@sahara ~/lecture1
-- using the `ls` command with no arguments shows all files and directories contained within the working directory. So within the lecture1 directory we can see Hello.class, Hello.java. messages, and README
+- using the `ls` command with no arguments shows all files and directories contained within the working directory. So within the lecture1 directory, we can see Hello.class, Hello.java. messages, and README
 - Not an error!
 
 ## Typing `ls` with path to a _directory_
