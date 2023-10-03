@@ -1,3 +1,5 @@
+# Lab 1 Report
+
 ## Typing `cd` with _no arguments_
 ![Image](cd_noarg.png)
 - working directory: user@sahara ~/lecture1
