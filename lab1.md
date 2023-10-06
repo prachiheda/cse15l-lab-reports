@@ -39,8 +39,8 @@
 ## Typing `cat` with _no arguments_
 ![Image](cat_noarg.png)
 - working directory: user@sahara ~/lecture1
-- using the `cat` command with not run anything... it continuously loads without getting an output. This is because `cat` reads data from the file and gives its content as output. In our case, there is no data to read from our directory because we are not in a file!
-- Error!
+- using the `cat` command with not run anything... it actually waits for an input from the keyboard. 
+- Not an error!
 
 ## Typing `cat` with path to a _directory_
 ![Image](cat_directory.png) 
