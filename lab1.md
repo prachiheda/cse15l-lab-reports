@@ -16,7 +16,7 @@
 ![Image](cd_file.png)
 - working directory: `user@sahara ~/lecture1`
 - using the `cd` command with a file does not work, as cd stands for "change directory." Even though there is a file named Hello.java in the lecture1 folder, I cannot access it using `cd`.
-- Error!
+- Error! The argument must be a directory, not a file. 
 
 ## Typing `ls` with _no arguments_
 ![Image](ls_noarg.png)
@@ -46,7 +46,7 @@
 ![Image](cat_directory.png) 
 - working directory: `user@sahara ~/lecture1`
 - using the `cat` command with a path to a directory will give an error saying that our argument is not a file. This error occurs again because there is no data to read from our argument because it is not a file!
-- Error!
+- Error! The argument must be a file, not a directory
 
 ## Typing `cat` with a path to a _file_ 
 ![Image](cat_file.png)
