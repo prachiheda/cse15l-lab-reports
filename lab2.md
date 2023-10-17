@@ -68,6 +68,12 @@ class SearchEngine {
 - path to private key: /Users/prachiheda/.ssh/id_ed25519
 - path to public key: /Users/prachiheda/.ssh/id_ed25519.pub
 
+![Image](lab2ss4.png)
+
+## Part 3
+
+In week 3, I learned more about ssh into a remote server, specfically creating a private/public key to `ssh` into the ieng6 remote server without entering a password. I thought the `scp` command was interesting. `scp` stands for secure copy protocol, and it securely transfers files between two hosts. I would like to know more on how it securely does this process. 
+
 
 
 
