@@ -50,7 +50,14 @@ class SearchEngine {
 
         Server.start(port, new Handler());
     }
-}
-'
+}'
 
+![Image](lab2ss1.png)
+- the 'handleRequest' function is called
+- the relevant argument for 'handleRequest' is the url of the page, which we can edit to add info. Within this method, there are 3 relevant fields. 'String[] parameters' holds the query information (on either side of the = sign). 'String list' is how I keep track of the query information to format. And 'int count' allows me to increment and make a numbered list.
+- 'String[] parameters' changes completely depending on the url input. In this case, it should hold s in 'parameters[0]' and Hello in 'parameters[1]'. String list' gets updated depending on it a new word is added to my ArrayList. It just holds 1. Hello in this case. 'int count' increments every time the for loop is run to make a numbered list.
 
+![Image](lab2ss2.png)
+- the 'handleRequest' function is called again 
+- again the relevant argument for 'handleRequest' is the url of the page, which we can edit to add info. Within this method, there are 3 relevant fields. 'String[] parameters' holds the query information (on either side of the = sign). 'String list' is how I keep track of the query information to format. And 'int count' allows me to increment and make a numbered list.
+- 'String[] parameters' changes completely depending on the url input. In this case, it should hold s in 'parameters[0]' and Hello there in 'parameters[1]'. String list' gets updated depending on it a new word is added to my ArrayList. It holds 1. Hello 2. Hello there in this case. 'int count' increments every time the for loop is run to make a numbered list.
