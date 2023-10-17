@@ -61,3 +61,13 @@ class SearchEngine {
 - the `handleRequest` function is called again 
 - again the relevant argument for `handleReques` is the url of the page, which we can edit to add info. Within this method, there are 3 relevant fields. `String[] parameters` holds the query information (on either side of the = sign). `String list` is how I keep track of the query information to format. And `int count` allows me to increment and make a numbered list.
 - `String[] parameters` changes completely depending on the url input. In this case, it should hold s in `parameters[0]` and Hello there in `parameters[1]`. `String list` gets updated depending on it a new word is added to my ArrayList. It holds 1. Hello 2. Hello there in this case. `int count` increments every time the for loop is run to make a numbered list.
+
+## Part 2
+
+![Image](lab2ss3.png)
+- path to private key: /Users/prachiheda/.ssh/id_ed25519
+- path to public key: /Users/prachiheda/.ssh/id_ed25519.pub
+
+
+
+
