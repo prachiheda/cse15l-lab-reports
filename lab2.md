@@ -1,7 +1,8 @@
 # Lab 2 Report
 
 ## Part 1
-`import java.io.IOException;
+```
+import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 
@@ -50,7 +51,9 @@ class SearchEngine {
 
         Server.start(port, new Handler());
     }
-}`
+}
+
+```
 
 ![Image](lab2ss1.png)
 - the `handleRequest` function is called
