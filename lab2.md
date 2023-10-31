@@ -67,9 +67,10 @@ class SearchEngine {
 
 ## Part 2
 
-![Image](lab2ss3.png)
+![Image](lab2privkey.png)
+![Image](lab2pubkey.png)
 - path to private key: /Users/prachiheda/.ssh/id_ed25519
-- path to public key: /Users/prachiheda/.ssh/id_ed25519.pub
+- path to public key: /home/linux/ieng6/cs15lfa23/cs15lfa23jl/.ssh/authorized keys 
 
 ![Image](lab2ss4.png)
 
