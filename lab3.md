@@ -52,13 +52,14 @@ For this section, I am working with the find command.
 
 ### Option 1: -empty 
 The -empty option searches for empty files and directories. Source: https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+This option can be useful to search empty files that might not be needed. Or to test if code that is supposed to write in a file worked. 
 
 #### Using -empty on ./technical: 
 ```
 Prachis-MacBook-Air:docsearch prachiheda$ find ./technical -empty
 Prachis-MacBook-Air:docsearch prachiheda$
 ```
-Makes sense! There are no empty directories or files in ./technical. 
+Makes sense! There are no empty directories or files in ./technical. Therefore there is no command line output.  
 
 #### Using -empty on ./technical (after adding an empty file to ./technical/biomed with the name empty.txt for testing purposes): 
 ```
@@ -70,6 +71,7 @@ It works to find empty files in subdirectories of the parent directory.
 
 ### Option 2: -newer 
 The -newer option searches for files that were modified/created after another given file. Source: https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+This can be useful for tracking history of file creation. 
 
 #### Using -newer on ./technical/911report with file chapter-1.txt: 
 ```
@@ -110,6 +112,7 @@ It works with directories as well!
 
 ### Option 3: -user 
 The -user option searches for file owned by username. Source: https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+This option would be useful to check contributions on a group project. 
 
 #### Using -user ucsd-cse15l-f23 on ./technical: 
 ```
@@ -147,6 +150,7 @@ Makes sense! I own all the files.
 
 ### Option 4: -size 
 The -size option searches for files based on specified size (less than, greater than, equal to). Source: https://tecadmin.net/linux-find-command-with-examples/
+This option can be useful for testing large files, or if there is a size requirement for another piece of code. 
 
 #### Using -size -512c on ./technical/biomed: 
 ```
