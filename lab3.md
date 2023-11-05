@@ -107,3 +107,58 @@ Prachis-MacBook-Air:docsearch prachiheda$ find ./technical -newer ./technical/91
 Prachis-MacBook-Air:docsearch prachiheda$ 
 ```
 It works with directories as well! 
+
+### Option 3: -user 
+The -user option searches for file owned by username. Source: https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+
+#### Using -user ucsd-cse15l-f23 on ./technical: 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical -user ucsd-cse15l-s23
+find: -user: ucsd-cse15l-s23: no such user
+Prachis-MacBook-Air:docsearch prachiheda$ 
+```
+Makes sense! There are no other users in this scenario, its on my personal github after I forked and cloned the original repo. 
+
+#### Using -user prachiheda on ./technical/911report (there are too many files in just ./technical): 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical/911report -user pr
+achiheda
+./technical/911report
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-2.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-5.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-8.txt
+./technical/911report/preface.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+Prachis-MacBook-Air:docsearch prachiheda$ 
+```
+Makes sense! I own all the files. 
+
+### Option 4: -size 
+The -size option searches for files based on specified size (less than, greater than, equal to). Source: https://tecadmin.net/linux-find-command-with-examples/
+
+#### Using -size -512c on ./technical/biomed: 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical/biomed -size -512c
+Prachis-MacBook-Air:docsearch prachiheda$ 
+```
+Looks like there are no files less than 512 bytes. 
+
+#### Using -size +100k on ./technical/biomed: 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical/biomed -size +100k
+./technical/biomed/1471-2105-3-2.txt
+Prachis-MacBook-Air:docsearch prachiheda$ 
+```
+Seems like there is only one file that is greater than 100 KB. 
