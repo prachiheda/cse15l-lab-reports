@@ -46,6 +46,25 @@ static void reverseInPlace(int[] arr) {
 ```
 We need to have another variable temp, and only iterate halfway through the array, and swap values on either side. Otherwise, the method is overwriting the original elements of the array as it iterates through it. This leads to all elements in the array becoming the last element of the original array.
 
+## Part 2
 
+For this section, I am working with the find command. 
 
+### Option 1: -empty 
+The -empty option searches for empty files and directories. Source: https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+
+#### Using -empty on ./technical: 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical -empty
+Prachis-MacBook-Air:docsearch prachiheda$
+```
+Makes sense! There are no empty directories or files in ./technical. 
+
+#### Using -empty on ./technical (after adding an empty file to ./technical/biomed with the name empty.txt for testing purposes): 
+```
+Prachis-MacBook-Air:docsearch prachiheda$ find ./technical -empty
+./technical/biomed/empty.txt
+Prachis-MacBook-Air:docsearch prachiheda$
+```
+It works to find empty files in subdirectories of the parent directory. 
 
