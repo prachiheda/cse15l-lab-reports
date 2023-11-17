@@ -24,6 +24,13 @@ public void testReverseInPlace() {
 ```
 ### Symptom: 
 ![Image](lab3ss1.png)
+Here we can see I ran two tests. One of them failed (failure-inducing input) and the other did not (non-failure inducing input). As I am resubmitting this, I will provide more evidence to resolve the comment "Include a screenshot of the code actually passing the test case of the non-failure inducing input"
+
+![Image](failing.png)
+Screen shot of the test case failing in VSCODE (look at the red X mark)
+![Image](passing.png)
+Screen shot of the test case passing in VSCODE (look at the green check mark)
+ 
 
 ### Before and after fixed reverseInPlace method: 
 Before: 
