@@ -15,5 +15,5 @@
 8. Keys Pressed: `<up><up><up><up><up><enter>`. The `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java` was 5 up in search history, so I used arrow to access it. Then, I pressed `<up><up><up><up><up><enter>`. The `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` was also 5 up in history.
 ![Image](lab4ss5.png)
 
-9. Keys Pressed: `git add "L', `<tab>`, `.java`, `<enter>`. First we need to add ListExamples.java to staging. Then `git commit -m"Changed index1 to index2"`, `<enter>`. I used the `-m` to write a message from the command line. Lastly, I typed `git push`, `<enter>`. This will push my changes to my repository. 
+9. Keys Pressed: `git add "L"`, `<tab>`, `.java`, `<enter>`. First we need to add ListExamples.java to staging. Then `git commit -m"Changed index1 to index2"`, `<enter>`. I used the `-m` to write a message from the command line. Lastly, I typed `git push`, `<enter>`. This will push my changes to my repository. 
 ![Image](lab4ss6.png)
