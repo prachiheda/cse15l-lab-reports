@@ -3,10 +3,11 @@
 ## Part 1 - Debugging Scenario 
 
 1. I created my grade.sh file for week 9 lab, but I am having some issues with running JUnit on the student submissions. I tested my grade.sh file on https://github.com/ucsd-cse15l-f22/list-methods-corrected, which is a repo that SHOULD pass all tests. However, this is my output:
+![Image](lab5ss1.png)
 
    This is what is in the compilation_output.txt file:
 
-   ```
+```
 TestListExamples.java:1: error: package org.junit does not exist
 import static org.junit.Assert.*;
                        ^
@@ -45,5 +46,6 @@ TestListExamples.java:63: error: cannot find symbol
   location: class TestListExamples
 8 errors
 ```
+
 
 
