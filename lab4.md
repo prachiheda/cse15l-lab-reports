@@ -5,7 +5,7 @@
 ![Image](lab4ss7.png)
 
 6. Keys Pressed: `git clone`,`Command-V`,`<enter>`. I had used `Command-C` earlier to copy the `SSH` URL, so I was able to paste it into my terminal.
-![Image](actualss2.png)
+![Image](actualss2.jpeg)
 
 7. Keys Pressed: `cd la`, `<tab>`, `<enter>`. This allowed me to change directory to `lab7/`. Then, `Command-C` to copy `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java` from my notes, and `Command-V`, `<enter>` to paste and compile Junit tests. Again, `Command-C` to copy `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` from my notes, and `Command-V`,`L`,`<tab>`, `T`, `<tab>`, `j`, `<tab>`, `<enter>` to run Junit tests on `ListExamplesTest`.
 ![Image](lab4ss3.png)
