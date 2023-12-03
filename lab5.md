@@ -2,7 +2,7 @@
 
 ## Part 1 - Debugging Scenario 
 
-1. I created my grade.sh file for week 9 lab, but I am having some issues with running JUnit on the student submissions. I tested my grade.sh file on https://github.com/ucsd-cse15l-f22/list-methods-corrected, which is a repo that SHOULD pass all tests. However, this is my output:
+1. Student post: I created my grade.sh file for week 9 lab, but I am having some issues with running JUnit on the student submissions. I tested my grade.sh file on https://github.com/ucsd-cse15l-f22/list-methods-corrected, which is a repo that SHOULD pass all tests. However, this is my output:
 ![Image](lab5ss1.png)
 
 This is what is in the compilation_output.txt file:
@@ -104,5 +104,7 @@ else
 fi
 ```
 
+2. TA response: Hi! Yes, looks like JUnit is not being accessed in your grade.sh file. Have you checked the directories where you compile tests versus where the JUnit class path is? (Hint, I mean the variable CPATH in your grade.sh file). You can check this out by using echo pwd at a few key points in your grade.sh file.
 
+3. 
 
