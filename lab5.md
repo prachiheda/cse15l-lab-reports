@@ -110,9 +110,23 @@ fi
 
 ```
 CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
-cd lib 
+cd lib
 echo $PWD
-cd
+cd ..
 ```
-Above, I cd'ed into lib, printed the working directory, and exited so my code would work as normal.
+Above, I cd'ed into lib, printed the working directory, and then went back one directory so my code would work as normal. 
+
+```
+# Change to grading-area directory
+cd grading-area
+echo $PWD
+javac -cp $CPATH *.java > compilation_output.txt 2>&1
+```
+Above, I also added an `echo $PWD` to find out where the working directory is for my grading-area. 
+
+Here is my terminal output: 
+![Image](lab5ss2.png)
+I can see that the directory for lib is `/Users/prachiheda/repos/list-examples-grader/lib' and the directory for grading-area is /Users/prachiheda/repos/list-examples-grader/grading-area. I realize that I try to call my CPATH from inside grading-area, but my lib folder is not in grading-area, it is outside! So, to fix this bug, I would either have to add my lib folder inside grading-area or I could change my CPATH to go back one directory, and I decided the latter is easier. 
+
+
 
