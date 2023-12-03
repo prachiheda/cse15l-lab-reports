@@ -126,7 +126,7 @@ Above, I also added an `echo $PWD` to find out where the working directory is fo
 
 Here is my terminal output: 
 ![Image](lab5ss2.png)
-I can see that the directory for lib is `/Users/prachiheda/repos/list-examples-grader/lib' and the directory for grading-area is /Users/prachiheda/repos/list-examples-grader/grading-area. I realize that I try to call my CPATH from inside grading-area, but my lib folder is not in grading-area, it is outside! So, to fix this bug, I would either have to add my lib folder inside grading-area or I could change my CPATH to go back one directory, and I decided the latter is easier. Now, my CPATH variable stores `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'`. Notice the `../` which allows me to go up one directory. Thank you for the help!
+I can see that the directory for lib is `/Users/prachiheda/repos/list-examples-grader/lib'` and the directory for grading-area is `/Users/prachiheda/repos/list-examples-grader/grading-area`. I realize that I try to call my CPATH from inside grading-area, but my lib folder is not in grading-area, it is outside! So, to fix this bug, I would either have to add my lib folder inside grading-area or I could change my CPATH to go back one directory, and I decided the latter is easier. Now, my CPATH variable stores `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'`. Notice the `../` which allows me to go up one directory. Thank you for the help!
 
 4. - After successfully running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`, this is what my directory structure looks like:
 ![Image](lab5ss3.png)
