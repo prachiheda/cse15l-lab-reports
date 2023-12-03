@@ -17,4 +17,4 @@
 ![Image](actualss5.png)
 
 10. Keys Pressed: `git add "L"`, `<tab>`, `.java`, `<enter>`. First we need to add ListExamples.java to staging. Then `git commit -m"Changed index1 to index2"`, `<enter>`. I used the `-m` to write a message from the command line. Lastly, I typed `git push`, `<enter>`. This will push my changes to my repository. 
-![Image](lab4ss6.png)
+![Image](actualss6.jpeg)
