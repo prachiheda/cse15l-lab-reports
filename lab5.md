@@ -106,5 +106,13 @@ fi
 
 2. TA response: Hi! Yes, looks like JUnit is not being accessed in your grade.sh file. Have you checked the directories where you compile tests versus where the JUnit class path is? (Hint, I mean the variable CPATH in your grade.sh file). You can check this out by using echo pwd at a few key points in your grade.sh file.
 
-3. 
+3. Student response: Thanks for the help! First, I added a few lines to my grade.sh file to figure out the where lib (the JUnit test info) is stored, versus the directory where I call JUnit, which is in the grading-area. This is what I added:
+
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+cd lib 
+echo $PWD
+cd
+```
+Above, I cd'ed into lib, printed the working directory, and exited so my code would work as normal.
 
