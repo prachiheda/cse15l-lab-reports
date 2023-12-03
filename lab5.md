@@ -126,7 +126,71 @@ Above, I also added an `echo $PWD` to find out where the working directory is fo
 
 Here is my terminal output: 
 ![Image](lab5ss2.png)
-I can see that the directory for lib is `/Users/prachiheda/repos/list-examples-grader/lib' and the directory for grading-area is /Users/prachiheda/repos/list-examples-grader/grading-area. I realize that I try to call my CPATH from inside grading-area, but my lib folder is not in grading-area, it is outside! So, to fix this bug, I would either have to add my lib folder inside grading-area or I could change my CPATH to go back one directory, and I decided the latter is easier. 
+I can see that the directory for lib is `/Users/prachiheda/repos/list-examples-grader/lib' and the directory for grading-area is /Users/prachiheda/repos/list-examples-grader/grading-area. I realize that I try to call my CPATH from inside grading-area, but my lib folder is not in grading-area, it is outside! So, to fix this bug, I would either have to add my lib folder inside grading-area or I could change my CPATH to go back one directory, and I decided the latter is easier. Now, my CPATH variable stores `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'`. Notice the `../` which allows me to go up one directory. Thank you for the help!
 
+4. - After successfully running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`, this is what my directory structure looks like:
+![Image](lab5ss3.png)
 
+- before fixing the bug, my grade.sh file contained this: 
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+rm -rf grading-area
+
+mkdir grading-area
+
+git clone $1 student-submission
+echo 'Finished cloning'
+
+if [ -e student-submission/ListExamples.java ]; then
+    echo 'Expected file found. Proceeding with compilation and testing.'
+    # Move student code and grading tests to grading-area
+    cp -r student-submission/*.java grading-area/
+    cp -r TestListExamples.java grading-area/
+    # Change to grading-area directory
+    cd grading-area
+    javac -cp $CPATH *.java > compilation_output.txt 2>&1
+
+    # Check the compilation status
+    if [ $? -eq 0 ]; then
+        echo 'Compilation successful. Proceeding with testing.'
+        # Run JUnit tests and redirect the output to test_output.txt
+        java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test_output.txt 2>&1
+
+        # Check the test results using grep
+         passed_tests=$(grep -o "OK ([0-9]\+ tests)" test_output.txt | grep -o "[0-9]\+")
+         echo $passed_tests
+
+        # Print the number of passed tests
+        echo "Number of passed tests: $passed_tests"
+
+        # Calculate the grade based on the number of passed tests
+        if [ "$passed_tests" == "3" ]; then
+            echo 'Grade: A'
+        elif [ "$passed_tests" == "2" ]; then
+            echo 'Grade: B'
+        elif [ "$passed_tests" == "1" ]; then
+            echo 'Grade: C'
+        else
+            echo 'Grade: F'
+        fi
+
+    else
+        echo 'Error: Compilation failed. See compilation_output.txt for details.'
+        exit 1  # Exit the script with an error code
+    fi
+
+else
+    echo 'Error: Expected file not found in the student submission.'
+    exit 1  # Exit the script with an error code
+fi
+```
+
+- I ran `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected` to induce the bug.
+- To fix the bug, all I had to edit was my JUnit CPATH to `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'`.
+
+  
+## Part 2 - Reflection
+Something new that I learned this quarter was vim, and I really enjoyed using vim when it came to making small edits in my files. I had encountered vim by accident before taking this class, when committing a file to a git repo. Then it opened up the vim editor in my terminal, and I had no idea how to exit or escape it. Now that I know vim, adding commit messages to github is easy, even though I typically write it in the command line anyways. I think it is really cool that I accidentally encountered it before this class, and now I know what it is. 
 
